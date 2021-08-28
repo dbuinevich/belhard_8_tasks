@@ -21,3 +21,44 @@
 Периметр = 4 * a
 Площадь = a ** 2
 """
+from abc import ABC, abstractmethod
+import math
+
+
+class Shape(ABC):
+    @abstractmethod
+    def get_perimeter(self):
+        pass
+
+    @abstractmethod
+    def get_square(self):
+        pass
+
+
+class Circle(Shape):
+    def get_perimeter(self, r: int):
+        return 2 * math.pi * r
+
+    def get_square(self, r: int):
+        return math.pi * r ** 2
+
+
+class Rectangle(Shape):
+    def get_perimeter(self, a: int, b: int):
+        return 2 * (a + b)
+
+    def get_square(self, a: int, b: int):
+        return a * b
+
+
+class Square(Shape):
+    def get_perimeter(self, a: int):
+        return a * 4
+
+    def get_square(self, a: int):
+        return a ** 2
+
+
+square = Square()
+print(square.get_square(5))
+print(square.get_perimeter(5))

@@ -22,3 +22,14 @@
 Программа завершается, когда останется один юнит, на экран выводится сообщение о том,
 кто одержал победу.
 """
+
+
+class Warrior:
+    name: str
+    health_points: int
+
+    def __init__(self, name: str, health_points: int = 100):
+        self.name = name
+        self.health_points = health_points
+
+    def hit(self, enemy):

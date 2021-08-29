@@ -22,6 +22,7 @@
 Программа завершается, когда останется один юнит, на экран выводится сообщение о том,
 кто одержал победу.
 """
+import random
 
 
 class Warrior:
@@ -33,3 +34,22 @@ class Warrior:
         self.health_points = health_points
 
     def hit(self, enemy):
+        enemy.health_points -= 20
+        print(f"Атаковал {self.name}")
+        print(f"У противника осталось {enemy.health_points} очков здоровья")
+
+
+if __name__ == '__main__':
+    war_list = []
+    war_list.append(Warrior("Боец"))
+    war_list.append(Warrior("Братуха"))
+    war_list.append(Warrior("Борцуха"))
+    war_list.append(Warrior("Вертуха"))
+    war_list.append(Warrior("Оплеуха"))
+    while len(war_list) > 1:
+        war1_i, war2_i = random.sample(range(0, len(war_list)), 2)
+        war1, war2 = war_list[war1_i], war_list[war2_i]
+        war1.hit(war2)
+        if war2.health_points == 0:
+            del war_list[war2_i]
+    print(f"Одержал победу {war_list[0].name}")

@@ -11,11 +11,4 @@ class Tomato:
         self.ripeness = self.states[self.states.index(self.ripeness) + 1]
 
     def is_ripe(self):
-        if self.ripeness == self.states[3]:
-            return True
-        else:
-            return False
-
-
-tomat = Tomato(1)
-print(tomat.grow())
+        return self.ripeness == self.states[3]

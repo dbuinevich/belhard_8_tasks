@@ -4,10 +4,18 @@ from gardener import Gardener
 
 
 if __name__ == '__main__':
-    tomatobush1 = TomatoBush("pomidor1-1", "pomidor1-2")
-    tomatobush2 = TomatoBush("tomato1-1", "tomato1-2")
+    pomidor1 = Tomato(1)
+    pomidor2 = Tomato(2)
+    tomato1 = Tomato(3)
+    tomato2 = Tomato(4)
+    tomatobush1 = TomatoBush(pomidor1, pomidor2)
+    tomatobush2 = TomatoBush(tomato1, tomato2)
     gardener = Gardener("Vasyan", tomatobush1, tomatobush2)
     gardener.work()
     gardener.harvest()
+    gardener.work()
+    gardener.work()
+    # print(gardener.harvest())
+    print(len(gardener.harvest()))
 
 

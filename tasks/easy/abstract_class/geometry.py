@@ -22,7 +22,7 @@
 Площадь = a ** 2
 """
 from abc import ABC, abstractmethod
-import math
+from math import pi
 
 
 class Shape(ABC):
@@ -37,10 +37,10 @@ class Shape(ABC):
 
 class Circle(Shape):
     def get_perimeter(self, r: int):
-        return 2 * math.pi * r
+        return 2 * pi * r
 
     def get_square(self, r: int):
-        return math.pi * r ** 2
+        return pi * r ** 2
 
 
 class Rectangle(Shape):

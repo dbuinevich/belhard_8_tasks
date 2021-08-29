@@ -1,7 +1,6 @@
+from gardener import Gardener
 from tomato import Tomato
 from tomato_bush import TomatoBush
-from gardener import Gardener
-
 
 if __name__ == '__main__':
     pomidor1 = Tomato(1)
@@ -17,5 +16,3 @@ if __name__ == '__main__':
     gardener.work()
     # print(gardener.harvest())
     print(len(gardener.harvest()))
-
-

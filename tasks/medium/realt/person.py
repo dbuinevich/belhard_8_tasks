@@ -1,6 +1,3 @@
-from house import House
-
-
 class Person:
     name: str
     age: int
@@ -30,5 +27,3 @@ class Person:
             print(self.money)
         else:
             print("Недостаточно средств, лошара")
-
-

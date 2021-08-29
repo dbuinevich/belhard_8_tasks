@@ -1,5 +1,3 @@
-from tomato import Tomato
-
 class TomatoBush:
     tomato_list: list
 
@@ -22,19 +20,3 @@ class TomatoBush:
         tomato_list_2 = self.tomato_list.copy()
         self.tomato_list.clear()
         return tomato_list_2
-
-#
-# if __name__ == '__main__':
-#     pomidor1 = Tomato(1)
-#     pomidor2 = Tomato(2)
-#     tomato1 = Tomato(3)
-#     tomato2 = Tomato(4)
-#     tomatobush1 = TomatoBush(pomidor1, pomidor2)
-#     tomatobush2 = TomatoBush(tomato1, tomato2)
-#     tomatobush1.give_away_all()
-#     tomatobush1.grow_all()
-#     tomatobush1.grow_all()
-#     tomatobush1.grow_all()
-
-
-

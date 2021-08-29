@@ -29,7 +29,7 @@ class Person:
 
 
 class LibraryReader(Person):
-    id: int
+    idn: int
     books: list
 
     def __init__(self, fio: str, books: list):

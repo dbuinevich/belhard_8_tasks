@@ -23,5 +23,3 @@ class Gardener:
         else:
             print("Все томаты не созрели")
             return None
-
-
